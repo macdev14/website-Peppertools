@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=320" />
+<title>Peppertools
+
+
+</title>
+<link href="home-design.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="IMG/logo2.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<div id="topbar"> <img id="logo" src= "IMG/logo.gif"> 
+		<div id="but1" class="button"><span id="home">Home</span> </div>
+   		<div id="but2" class="button"><span id="contact">Contact</span></div>
+		<div id="but3" class="button"><span id="machinery">Machinery</span></div>
+   		<div id="but4" class="button"><span id="login">Login</span></div>
+   </div>
+	
+	
+	
+
+
+        
+        <script type="text/javascript">
+          
+            $("#contact").click(
+            $.ajax("Contact.html")
+                .done(function(data) {
+                
+                $("body").html(data);
+                
+                })
+                .fail(function() {
+                
+                alert("Could not load page");
+                
+                });
+            
+        )
+            
+        </script>
+        
+ 
+	
+	
+	
+</body>
+</html>

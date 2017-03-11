@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=320" />
+<title>Peppertools
+
+
+</title>
+<link href="contact-design.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="logo2.ico">
+
+</head>
+
+<body>
+<div id = "screen-adjust">
+	<div id="topbar"> <img id="logo" src="IMG/logo.gif"> 
+		<div id="but1" class="button"><span id="home">Home</span></div>
+  	    <a src= "Contact.html">
+   		<div id="but2" class="button"><span id="contact">Contact</span></div></a>
+		<div id="but3" class="button"><span id="machinery">Machinery</span></div>
+   		<div id="but4" class="button"><span id="login">Login</span></div>
+   </div>
+	
+	
+  <div id="side-bar2">
+  
+	  <p id="text-title"><strong> <em> Tool Engineering</em></strong></p>
+    <span id="side-bar-text"> 	</span>
+    		
+     
+	  <div style= width: 50%> 
+	  <iframe width="100%" height="300" top= "100" left-margin=-50px padding-top="100px" frame-radius=20px -moz-border-radius="40px"; 
+	  src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=R.%20Volunt%C3%A1rio%20Ant%C3%B4nio%20dos%20Santos%2C%20429%20-%20Matadouro+(Pimentel%20Ferramentas)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" 
+	  frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="http://www.mapsdirections.info/ro/creeaza-harta-google/">Google maps html pentru site-ul</a> na <a href="http://www.mapsdirections.info/ro/">Planificare rută cu Google Maps</a></iframe></div> <br/>
+	  
+	  <div id="Layer4" style=";"><span class="style16">M</span>achines<br>
+        <br>
+        + CNC ToolMaster 5000 5 Axis<br>
+        + Sch&uuml;tte CNC WU500/750<br>
+        + PepperTool 1.0 3 Axis<br>
+        +<br>
+        +<br>
+            </div> 
+		</div>
+		
+		<div class="form-box" id="confirm">
+		<div id="errorMessage"></div>
+		
+		
+			<label for="email" id="gmail">Email</label>
+  <input type="text" name="email" id="email" placeholder = "eg.yourname@gmail.com">
+			
+			<label for="phone">Phone</label>
+  <input type="text" name="phone" id="phone" placeholder = "123456789">
+  
+  <label for="password" id="up-word">Password</label>
+  <input type="password" name="password" id="password">
+ 
+   <label for="passwordConfirm" id="password-2">Confirm <span id="pass">Password</span></label>
+  <input type="password" name="password" id="passwordConfirm">
+  
+  <input type="submit" id="submitButton" value="Sign Up">
+			
+			</div>
+		
+		
+		
+
+	
+</div>
+	
+	<script> 
+		
+		
+		
+		
+		function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  
+			
+			return regex.test(email);
+}
+		
+		$("#submitButton").click(function(){
+			
+			if(isEmail($("#email").val()) == false){
+				
+				
+				errorMessage += "<p>Your email address is not valid</p>";
+				
+		}
+			
+		
+		
+		var errorMessage = "";
+		
+		
+		var fieldsMissing = "";
+		
+		if($("#email").val() == "")	{
+			
+			
+			fieldsMissing += "<br>Email";
+			
+		}
+		
+		if($("#phone").val() == "")	{
+			
+			
+			fieldsMissing += "<br>Telephone";
+			
+		}
+		
+		if($("#password").val() == "")	{
+			
+			
+			fieldsMissing += "<br>Password";
+			
+		}
+		
+		
+		if($("#passwordConfirm").val() == "")	{
+			
+			
+			fieldsMissing += "<br>Confirm Password";
+			
+		}
+		
+		if(fieldsMissing != ""){ errorMessage += "<p>The following field(s) are missing:" += fieldsMissing; 
+							   
+							   
+							   
+	    }
+		
+		
+		
+		
+			
+		
+	
+		if($.isNumeric($("#phone").val()) == false) {
+			
+			
+			errorMessage += "<p>Your phone number is not numeric</p>";
+			
+			
+		}
+		
+			
+			
+	
+		
+		if( $("#password").val() != $("#passwordConfirm").val() ) {
+			
+			errorMessage += "<p>Your passwords don't match</p>";
+			
+			
+		}
+			
+			if(errorMessage != ""){ $("#errorMessage").html(errorMessage);
+								  
+								  
+								  
+			}
+			
+			
+			});
+		
+	</script>
+	
+			
+	
+	
+	
+</body>
+</html>
